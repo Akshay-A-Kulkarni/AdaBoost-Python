@@ -79,9 +79,8 @@ def main():
     # Changing labels to {-1, 1}
     y[y == 0] = -1
     y[y == 1] = 1
-    # print(X)
-    # print(y)
-    
+
+    # Creating train test splits 
     X_train, X_test, y_train, y_test= train_test_split(X,y, test_size = 0.25, random_state = 0, stratify=y)
     
     # Adaboost classification with T weak classifiers
